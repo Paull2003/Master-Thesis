@@ -2,3 +2,4 @@
 *.bbl
 *.equation
 *.synctex.gz
+*.run.xml
