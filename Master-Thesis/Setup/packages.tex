@@ -1,0 +1,129 @@
+% Deutsche Anpassungen %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[T1]{fontenc}%     %% Schriftkodierung
+%\usepackage[ansinew]{inputenc}%% Eingabekodierung
+\usepackage[utf8]{inputenc}%% Eingabekodierung
+
+\usepackage[ngerman]{babel}%  %% Neue deutsche Rechtschreibung verwenden
+\addto\captionsngerman{%      %% Name des Literaturverzeichnisses verändern
+  \renewcommand{\bibname}{Quellen}%
+}
+\usepackage{csquotes}
+\usepackage{booktabs}
+\usepackage{color}  % Farben im allgemeinen
+\usepackage{colortbl}
+\definecolor{rot}{rgb}{1,0.3,0.3}
+\definecolor{drot}{rgb}{1,0.4,0.2}
+\definecolor{grun}{rgb}{0.3,1,0.3}
+
+\usepackage{pifont}
+\usepackage{siunitx}
+\sisetup{
+	locale = DE ,
+	per-mode = symbol
+}
+
+% URL %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{url}%               %% Links durch \url{}
+
+% Schriftarten %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{lmodern}% 			%% Latin-modern Schriftart
+
+% Diverses %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{blindtext}
+
+%% Textformatierung %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[                  %% Package für Farbe
+   pdftex,                    % Ausgabe für pdfTeX
+   svgnames,                  % Zusätzliche Farben per Name hinzufügen
+   x11names                   % noch mehr Farben
+]{xcolor}%                 
+
+%% Packages für Grafiken & Abbildungen %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[pdftex]{graphicx}% %% Zum Laden von Grafiken
+\graphicspath{{Bilder/}}%     % Standardpfad für Bilder/Grafiken
+
+\usepackage{fancybox}         % Ermöglicht zeichnen von Boxen von definierter Länge
+
+% Bild statt Abbildung
+\addto\captionsngerman{\renewcommand{\figurename}{Abbildung}} % with ngerman
+
+\usepackage{float}
+% fancy cross-referencing \fref & \Fref
+\usepackage[german, plain]{fancyref}
+
+\usepackage[
+   format = hang,             % Ausrichtung
+   labelformat = default,     % Bezeichnerformatierung
+   labelsep = colon,          % Bezeichner-Trennzeichen
+   justification = justified, % Text als Blocksatz setzen
+   singlelinecheck = true,    % 1-Zeilen-Beschriftungen --> zentrieren erlaubt
+   font = {it, small},        % Beschriftungsformat   
+   labelfont = bf,            % Bezeichnerformat (Bild x.y...)
+   margin = 0pt,              % Beschriftungsrand (auch links/rechts möglich {0pt, 0pt})
+   twoside,                   % Zweiseitiger Textsatz
+   parskip = 5pt,             % Abstand zwischen Absätzen in Beschriftungen
+   skip = 8pt,                % Abstand von Beschriftung
+   listfigurename = Bilderverzeichnis,  % Abbildungen anstatt Abbildungsverzeichnis
+   listtablename  = Tabellen,           % Tabellen anstatt Tabellenverzeichnis
+   figurewithin = chapter,    % Zählerbegrenzung festlegen (also Bild 3.1 anstatt Bild 43)
+   tablewithin = chapter      % Zählerbegrenzung festlegen
+]{caption}
+
+\usepackage{afterpage}
+\usepackage{subcaption}       %% Verwendung von subcaption statt subfigure, da subfigure veraltet ist
+                              
+%% Tabellen %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{array}            %% Standarderweiterung für Tabellen   
+
+
+%% Bibliographiestil %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[backend=biber,style=numeric,sorting=none]{biblatex}
+\addbibresource{Kapitel/7_Literatur/Literatur.bib}
+
+
+
+%%Packages für Kopf- und Fußzeile%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{fancyhdr}%
+
+%%Packages für Fußnoten%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{chngcntr}%
+\counterwithout*{footnote}{chapter} % Deaktiviert das Zurücksetzen des Fußnoten-Counters
+
+%% Mathematik-Packages%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath}             %% AMS Mathematikumgebungen/-erweiterungen   
+\usepackage{amssymb}             %% AMS Symbol/Font-Paket
+\usepackage{accents}             %% Erweiterung für Akzente im Mathematik-Modus
+\usepackage{mathcomp}            %% Symbolerweiterungen für Mathematikmodus
+\usepackage{amsthm}
+\usepackage{amsbsy}
+
+%% Erscheinungsbild von Paragraph ändern %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% titlesec wurde entfernt, da es mit KOMA-Script in Konflikt steht
+\RedeclareSectionCommand[beforeskip=6pt, afterskip=6pt]{section}
+\RedeclareSectionCommand[beforeskip=5pt, afterskip=5pt]{subsection}
+\RedeclareSectionCommand[beforeskip=3pt]{paragraph}
+
+%% Abkürzungsverzeichnis %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+\usepackage[]{acronym}
+
+\usepackage{upgreek}
+\usepackage{setspace} 
+
+%%Hyperlink-Package%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ACHTUNG: Als letztes package einfügen!
+\usepackage[
+   plainpages=false,           %% Arabische Zeichen für Link-Darstellung
+   bookmarksopen=true,        %% Lesezeichenbaum aufklappen
+   bookmarksopenlevel=1,      %% Aufklapptiefe
+   pdfborder={0 0 0},         %% Rahmenfarbe
+   pdfsubject={Thema des Dokuments}, %% PDF Thema
+   pdfauthor={Dein Name},     %% Author
+   pdfpagemode=UseOutlines,	  %% Ansicht im Adobe Reader
+   pdftex                     %% Ausgabe mit pdfTeX
+]{hyperref}
+
+% Anpassen der Seitengeometrie, um die typearea Warnung zu beheben
+\KOMAoptions{DIV=12}
+\usepackage{multirow}
+\usepackage{makecell}
