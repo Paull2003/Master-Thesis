@@ -60,5 +60,8 @@
 			"language": "latex",
 			"scheme": "file"
 		}
-	]
+	],
+	"editor.wordWrap": "wordWrapColumn",
+	"editor.wordWrapColumn": 120,
+	"cSpell.language": "en,de"
 }
