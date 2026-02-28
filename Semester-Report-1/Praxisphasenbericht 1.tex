@@ -1,4 +1,4 @@
-% !TeX root = ../Praxisphasenbericht 1.tex
+% !TeX root = Praxisphasenbericht 1.tex
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Einbinden des Seiten Layouts
@@ -46,7 +46,7 @@
    \input{Kapitel/0_Start/Erklaerung}
    
    % Abstractum einfügen
-  % \newpage
+   %\newpage
    %\renewcommand\abstractname{Abstract}   	 	    % "`Abstract"' anstatt "`Zusammenfassung"'
    %\input{Kapitel/0_Start/Abstract}                			% Kein Abstract bei scrbook
    
@@ -58,7 +58,7 @@
    \setcounter{secnumdepth}{3}						% Tiefe des Inhaltsverzeichnisses festlegen
    \setcounter{tocdepth}{2}
    
-  
+   
    %\pdfbookmark{\contentsname}{TABLE_OF_CONTENTS}  % Inhaltsverzeichnis in PDF Lesezeichenliste aufnehmen
    \tableofcontents								    % Inhaltsverzeichnis erzeugen
    
@@ -68,15 +68,19 @@
    
    
    % Dokument initialisieren  #
-   \input{Kapitel/0_Start/Acronyme}			
+   % \input{Kapitel/0_Start/Acronyme}			
    \InitDokument
    
- 				% Abkürzungsverzeichnis	
+   % Abkürzungsverzeichnis	
    
    % Kapitel einbinden
-
+   \input{Kapitel/1_Einleitung/1_0_Einleitung}
+   \input{Kapitel/2_Stand_der_Technik/2_0_Stand_der_Technik.tex}
+   \input{Kapitel/3_Entwicklung_Steuerung/3_0_Entwicklung_Steuerung.tex}
+   \input{Kapitel/4_Entwicklung_Messwerterfassung/4_0_Entwurf_Messwerterfassung.tex}
+   \input{Kapitel/5_Fazit/5_0_Fazit.tex}
    
-       
+   
    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
    
    % Weitere Verzeichnisse
@@ -85,7 +89,7 @@
    \listoftables           							% Tabellenverzeichnis
    %   \lstlistoflistings      						% Codeverzeichnis   
 
-    
+   
    %\nocite{*}
    %\printbibheading
    \printbibliography
@@ -96,7 +100,7 @@
    
    
    %\printbibliography	
-		
+	
 %   \includepdfset{pagecommand={\thispagestyle{headings}}}
 %   \automark[section]{section}
 %   \lhead{Abkuerzungen}
